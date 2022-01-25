@@ -29,11 +29,13 @@ const onSave = () => {
   const data = window.topology.data();
   const json = JSON.stringify(data, undefined, 4);
   const blob = new Blob([json], { type: "text/json" });
-  const a = document.createElement("a");
-  a.download = filename;
-  a.href = window.URL.createObjectURL(blob);
-  a.dataset.downloadurl = ["text/json", a.download, a.href].join(":");
-  a.click();
+  // const a = document.createElement("a");
+  // a.download = filename;
+  // a.href = window.URL.createObjectURL(blob);
+  // a.dataset.downloadurl = ["text/json", a.download, a.href].join(":");
+  // a.click();
+  window.topology.locked={Disable :10};
+  console.log(window.topology);
 };
 const onTogglePen = () => {
   isPencilActive.value = false;
@@ -126,7 +128,7 @@ onUnmounted(() => {
 <template>
   <div class="header">
     <div class="logo">
-      <img src="../assets/images/favicon.ico" alt="乐吾乐" />
+      <!-- <img src="../assets/images/favicon.ico" alt="乐吾乐" /> -->
     </div>
     <div class="button-group">
       <button id="create" @click="onCreate">新建文件</button>

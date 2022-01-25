@@ -6,7 +6,9 @@
 -->
 <script setup lang="ts">
 import { onMounted } from "vue";
-import "../../../../dist/topology/topology.js";
+// import "../../../../dist/topology/topology.js";
+import "../../../../packages/topology.js/src/index.ts";
+
 
 onMounted(() => {
   new (window as any).Topology("topology");
@@ -15,7 +17,7 @@ onMounted(() => {
 
 <template>
   <div class="main">
-    <div class="topology" id="topology"></div>
+    <div class="topology" id="topology" ></div>
   </div>
 </template>
 

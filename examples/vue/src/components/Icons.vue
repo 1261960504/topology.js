@@ -7,6 +7,8 @@
 <script setup lang="ts">
 import { icons } from '../utils/data';
 const onDragStart = (e, data) => {
+  console.log(e);
+  console.log(data);
   e.dataTransfer.setData('Topology', JSON.stringify(data));
 };
 </script>
@@ -27,9 +29,9 @@ const onDragStart = (e, data) => {
         ></i>
       </div>
     </div>
-    <div class="link" >
-      <a href = "http://topology.le5le.com/workspace/">去官网</a>
-    </div>
+     <!-- <div class="link" >
+       <a href = "http://topology.le5le.com/workspace/">去官网</a>
+     </div> -->
   </div>
 </template>
 
